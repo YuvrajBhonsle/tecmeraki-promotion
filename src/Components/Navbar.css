@@ -1,0 +1,125 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+
+:root {
+	--mainColor: #29335c;
+	--mainColorLight: #5767aa;
+	--secondaryColor: #db2b39;
+	--textColor: #eee;
+}
+
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 33px;
+	width: 100vw;
+}
+
+header img {
+	position: absolute;
+	top: 23px;
+	left: 23px;
+	height: 4rem;
+	width: 8rem;
+}
+
+nav a {
+	margin: 0 1rem;
+	color: black;
+	text-decoration: none;
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+nav a:hover {
+	color: rgb(1, 1, 120);
+}
+
+header .nav-btn {
+	visibility: hidden;
+	border: hidden;
+	background-color: white;
+	font-size: 2rem;
+}
+
+header div,
+nav {
+	display: flex;
+	align-items: center;
+}
+
+.hire {
+	padding: 13px;
+	font-weight: bolder;
+	font-size: large;
+	background-color: royalblue;
+	color: white;
+	border: 2px solid transparent;
+	border-radius: 23px;
+	cursor: pointer;
+	transition: 0.2s
+}
+
+.hire:hover {
+	background-color: rgb(43, 73, 163);
+}
+
+@media only screen and (max-width: 1024px) {
+	header {
+		width: 100vw;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	header img {
+		position: absolute;
+		top: 27px;
+		left: 27px;
+	}
+
+	header .nav-btn {
+		visibility: visible;
+		opacity: 1;
+		font-size: 3rem;
+		padding: 0 13px;
+	}
+
+	header nav {
+		position: fixed;
+		top: -200vh;
+		left: 0;
+		height: 70vh;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 1.5rem;
+		background-color: var(--mainColor);
+		transition: 0.5s;
+	}
+
+	header .responsive_nav {
+		transform: translateY(200vh);
+		width: 100vw;
+	}
+
+	nav .nav-close-btn {
+		position: absolute;
+		top: 2rem;
+		right: 2rem;
+		background-color: #29335c;
+		color: white;
+	}
+
+	nav a {
+		font-size: 1.5rem;
+		color: white;
+	}
+}

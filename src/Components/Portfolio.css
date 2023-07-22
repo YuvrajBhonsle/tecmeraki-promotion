@@ -1,0 +1,64 @@
+.carousel {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin: 4rem 0px;
+  }
+  .carousel>h1{
+    font-size: 2.5rem;
+    display: flex;
+    margin: 23px auto;
+    border-bottom: 2px solid black;
+  }
+  .slider {
+    width: 100%;
+    display: flex;
+  transition: transform 0.5s ;
+}
+
+.slide {
+    display: flex;
+    width: fit-content;
+}
+
+.slide img {
+    margin: 13px;
+    border: 2px solid transparent;
+    border-radius: 13px;
+    width: 33%;
+  }
+  
+  .arrow-button {
+    position: absolute;
+    top: 50%;
+    padding: 10px;
+    background-color: black;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .arrow-button.left {
+    left: 10px;
+  }
+  
+  .arrow-button.right {
+    right: 10px;
+  }
+
+@media only screen and (max-width: 1024px) {
+    .carousel{
+      width: 160vw;
+    }
+    .slider {
+        width: 60%;
+      }
+    .slide img {
+        width: 100%;
+        height: auto;
+      }
+  }
+  
+  

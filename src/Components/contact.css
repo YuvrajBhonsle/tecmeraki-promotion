@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Bacasime+Antique&family=Ysabeau+SC:wght@300&display=swap');
+.contact-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+.contact-section>h1{
+font-size: 2.5rem;
+font-family: 'Bacasime Antique', serif;
+}
+.contact-section>p{
+    margin-top: 33px ;
+    font-family: 'Ysabeau SC', sans-serif;
+}
+.contact-section>input{
+    padding: 8px;
+    width: 30vw;
+    margin: 13px 0;
+    background-color: whitesmoke;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+.contact-section>button{
+    padding: 7px;
+    width: 8rem;
+    border: 2px solid transparent;
+    border-radius: 3px;
+    background-color: rgb(2, 2, 158);
+    color: white;
+    cursor: pointer;
+}
+.contact-section>span{
+    margin: 7px;
+    font-size: 23px;
+    color: green;
+    
+}
+.contact-section>button:hover{
+    background-color: navy;
+}
+@media only screen and (max-width: 1024px){
+    .contact-section{
+        background-color: whitesmoke;
+        width: 100%;
+        height: auto;
+        margin: 5rem 0;
+        padding: 3rem 0;
+    }
+    .contact-section>input{
+        width: 80vw;
+        border-radius: 5px;
+    }
+
+}

@@ -1,0 +1,56 @@
+.footer-section{
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.footer-section>div{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+}
+.socials>img{
+    height: 33px;
+    width: 33px;
+    filter: invert(100%);
+    margin: 0px 3px;
+    cursor: pointer;
+
+}
+#facebook{
+    scale: 1.4;
+}
+
+.logo>img{
+    height: 3.25rem;
+	width: 6.5rem;
+}
+.contact-email{
+    color: white;
+    font-size: 23px;
+}
+.copyright{
+    margin: 13px;
+}
+@media only screen and (max-width: 1024px){
+    .footer-section{
+        width: 100vw;
+        flex-direction: column;
+    }
+    .footer-section>div{
+        width: 100%;
+        margin: 13px 0;
+    }
+    .socials>img{
+        height: 50px;
+        width: 50px;
+        margin: 0 13px;
+    }
+    .contact-email{
+        font-size: 33px;
+    }
+}

@@ -1,0 +1,85 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Montserrat+Alternates&display=swap');
+
+.Services{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 7rem;
+}
+.Services>h1{
+    font-size: 2.5rem;
+    border-bottom: 2px solid black;
+}
+.services-section{
+    display: flex;
+    margin-top: 4rem;
+}
+.services-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30vw;
+}
+.services-container>img{
+    height: 23rem;
+    width: 23rem;
+}
+.services-content{
+    width: 23rem;
+ display: flex;
+ flex-direction: column; 
+ margin-top: 13px;
+}
+.services-content>h3{
+    color: gray;
+    font-weight: 100;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+}
+.services-content>a{
+    text-decoration: none;
+    font-size: 16px;
+    margin: 7px 0px;
+    color: blue;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+@media only screen and (max-width: 1024px){
+    .Services{
+        width: 160vw;
+    }
+    .Services>h1{
+        font-size: 48px;
+    }
+    .services-section{
+        display: flex;
+        flex-direction: column;
+    }
+    .services-container{
+        width: 160vw;
+        padding: 23px;
+    }
+    .services-container>img{
+        width: 130vw;
+        height: 100%;
+    }
+    .services-content{
+        padding: 23px;
+        width: 150vw;
+    }
+    .services-content>h1{
+        font-size: 43px;
+    }
+    .services-content>h3{
+        font-size: 33px;
+    }
+    .services-content>a{
+        font-size: 23px;
+    }
+}

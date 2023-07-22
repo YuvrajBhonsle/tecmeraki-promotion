@@ -1,0 +1,63 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.portfolio-header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  margin: 2rem auto;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid black;
+  margin-bottom: 9rem;
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+img{
+  width: 10rem;
+}
+
+section{
+  margin: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section h1{
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid black;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+section div{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+section div img{
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0.25rem;
+}
+
+@media only screen and (max-width: 1024px){
+  section div{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 600px){
+  section div{
+    grid-template-columns: 1fr;
+  }
+}

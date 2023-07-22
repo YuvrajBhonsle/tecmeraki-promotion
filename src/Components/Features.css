@@ -1,0 +1,95 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.features{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+.features>h1{
+    border-bottom: 2px solid black;
+    font-size: 2.5rem;
+    font-family: 'Montserrat', sans-serif;
+}
+.features-content{
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1rem;
+}
+.features-section{
+    margin: 2rem;
+}
+.features-section>ul{
+    width: 20vw;
+    list-style: circle;
+}
+.features-section>ul>li{
+    font-size: 18px;
+    color: gray;
+    margin: 7px;
+}
+.benefits-section{
+    margin-top: 3rem ;
+}
+
+.benefits-section>ul{
+    width: 20vw;
+    list-style: circle;
+}
+.benefits-section>ul>li{
+    font-size: 18px;
+    color: gray;
+    margin: 7px;
+}
+.features-img>img{
+    height: 21rem;
+    width: 21rem;
+    border: 2px solid transparent;
+    border-radius: 7px;
+    margin-top: 3rem;
+}
+
+/* mobile css starts here */
+
+@media only screen and (max-width: 1024px){
+    .features{
+        width: 160%;
+    }
+    .features-content{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .features-section>ul{
+        width: 150vw;
+        list-style: disc;
+        padding: 13px;
+    }
+    .features-section>h1{
+        font-size: 45px;
+    }
+    
+    .features-section>ul>li{
+        font-size: 30px;
+    }
+    .benefits-section>ul{
+        width: 150vw;
+        list-style: disc;
+        padding: 13px;
+    }
+    .benefits-section>h1{
+        font-size: 45px;
+    }
+    .benefits-section>ul>li{
+        font-size: 30px;
+    }
+    .features-img>img{
+        height: 100%;
+        width: 140vw;
+       
+    }   
+}
