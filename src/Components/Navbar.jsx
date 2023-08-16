@@ -4,7 +4,10 @@ import { FaTimes } from "react-icons/fa";
 import { AiOutlineMenu } from "react-icons/ai";
 import logo from "../assets/Logo.png";
 import { Link, NavLink } from "react-router-dom";
+import React, {useState} from "react";
+
 function Navbar() {
+  const [dropdown, setDropdown] = useState(false);
   const navRef = useRef();
 
   const showNavbar = () => {
@@ -32,8 +35,8 @@ function Navbar() {
             Services
           </a>
           <div className="dropdown">
-            <a>Solutions</a>
-            <div className="dropdown-content">
+            <a onClick={() => setDropdown(!dropdown)}>Solutions</a>
+            {dropdown && (<div className="dropdown-content">
               <a href="/">
                 <Link to="/buildingManagement">Building Management</Link>
               </a>
@@ -58,7 +61,7 @@ function Navbar() {
               <a href="/">
                 <Link to="/assetManagement">Asset Management & Ticketing</Link>
               </a>
-            </div>
+            </div>)}
           </div>
           <a href="/contactpage" onClick={closeNavbar}>
             <NavLink to="/contactpage">Contact</NavLink>
