@@ -16,7 +16,7 @@ function Portfolio() {
     <div>
       <h1 className='portfolio-header'>Portfolio</h1>
 
-      <section>
+      <section className='portfolio-grid-section'>
         <h1>What Service You Will Get From Me</h1>
         <div>
           <img src={img1} alt='img-1'/>

@@ -3,6 +3,7 @@ import service1 from '../assets/service1.webp'
 import service2 from '../assets/service2.webp'
 import service3 from '../assets/service3.webp'
 import './Services.css'
+import { Link } from 'react-router-dom'
 function Services() {
     return (
         <div className='Services' id='services'>
@@ -14,7 +15,7 @@ function Services() {
 
                     <h1>Industrial Automation Solutions</h1>
                     <h3>Our automation service streamlines your business processes and increases efficiency, allowing you to focus on growth and innovation</h3>
-                    <a href="/">Read more</a>
+                    <Link to="/industrialautomation">Read more</Link>
                     </div>
                 </div>
                 <div className="services-container">
@@ -23,7 +24,7 @@ function Services() {
 
                     <h1>Advanced IOT & Networking Solutions</h1>
                     <h3>Our IoT/network services provide reliable and secure connectivity solutions for businesses seeking to optimize their operations and streamline their processes.</h3>
-                    <a href="/">Read more</a>
+                    <Link to="/advancediot">Read more</Link>
                     </div>
                 </div>
                 <div className="services-container">
@@ -32,7 +33,7 @@ function Services() {
 
                     <h1>Industrial Electrical/Instrumentation Field Services</h1>
                     <h3>Our electrical and instrumentation field work services provide precise and reliable solutions to meet your industrial and commercial needs.</h3>
-                    <a href="/">Read more</a>
+                    <Link to="/industrialelectrical">Read more</Link>
                     </div>
                 </div>
                

@@ -1,0 +1,177 @@
+.main-container{
+  max-width: 100vw;
+  padding: 2rem 4rem;
+  padding-top: 5rem;
+}
+
+.head-container{
+  /* padding: 1rem 3rem; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 3rem;
+  gap: 2rem;
+  word-break: break-all;
+}
+
+.head-container img{
+  width: 60%;
+  height: 30%;
+  align-self: center;
+}
+
+.description-container{
+  padding: 3rem 3rem;
+  padding-bottom: 5rem;
+}
+
+.description-container .description-header{
+  padding-right: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid black;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.description-header h1{
+  font-size: 1.75rem;
+}
+
+.description-header button{
+  padding: 0.85rem 1.125rem;
+  background: blue;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.description-body{
+  padding: 0 0.5rem;
+  margin-bottom: 4rem;
+}
+
+.description-body p{
+  margin-bottom: 0.5rem;
+}
+
+.description-footer{
+  display: flex;
+  gap: 1rem;
+  justify-content: space-evenly;
+  padding: 0 0.35rem;
+}
+
+.description-footer .key-points{
+  width: 60%;
+}
+
+.description-footer .user-testimonial{
+  width: 50%;
+}
+
+.description-footer .key-points h4{
+  padding-bottom: 1.5rem;
+  font-size: 1.25rem;
+}
+
+.key-points ul{
+  padding: 0 2rem;
+}
+
+.key-points ul li{
+  margin-bottom: 1rem;
+}
+
+.user-testimonial{
+  display: flex;
+  flex-direction: column;
+}
+
+.user-testimonial h4{
+  margin-bottom: 3rem;
+  font-size: 1.25rem;
+}
+
+.testimonial-body{
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.testimonial-body h2{
+  font-size: 1.25rem;
+  color: blue;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-desc{
+  width: 60%;
+}
+
+.testimonial-body img{
+  width: 6rem;
+  height: 6rem;
+}
+
+@media only screen and (max-width: 800px){
+  .main-container{
+    padding: 2rem 1rem;
+  }
+
+  .head-container{
+    padding: 0 1rem;
+  }
+
+  .head-container img{
+    width: 100%;
+  }
+
+  .description-container{
+    padding: 2rem 1rem;
+  }
+
+  .description-container .description-header{
+    flex-direction: column;
+    text-align: center;
+    gap: .75rem;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .description-footer{
+    flex-direction: column;
+  }
+
+  .description-footer .key-points,
+  .description-footer .user-testimonial{
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+
+  .key-points ul{
+    padding: 0 1rem;
+  }
+
+  .user-testimonial h4{
+    margin-bottom: 1.75rem;
+  }
+
+  .testimonial-body{
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .testimonial-desc{
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .testimonial-body img{
+    width: 50%;
+    height: 100%;
+  }
+
+}

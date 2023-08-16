@@ -21,7 +21,7 @@ img{
   width: 10rem;
 }
 
-section{
+.portfolio-grid-section{
   margin: 0 2rem;
   display: flex;
   flex-direction: column;
@@ -29,7 +29,7 @@ section{
   align-items: center;
 }
 
-section h1{
+.portfolio-grid-section h1{
   margin-bottom: 1rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid black;
@@ -37,13 +37,13 @@ section h1{
   font-size: 2.5rem;
 }
 
-section div{
+.portfolio-grid-section div{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0.5rem;
 }
 
-section div img{
+.portfolio-grid-section div img{
   width: 100%;
   object-fit: cover;
   object-position: center;
@@ -51,13 +51,13 @@ section div img{
 }
 
 @media only screen and (max-width: 1024px){
-  section div{
+  .portfolio-grid-section div{
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media only screen and (max-width: 600px){
-  section div{
+  .portfolio-grid-section div{
     grid-template-columns: 1fr;
   }
 }

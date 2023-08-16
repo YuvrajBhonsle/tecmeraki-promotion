@@ -1,0 +1,156 @@
+.building-container{
+  max-width: 100vw;
+  width: 100%;
+  background: white;
+}
+
+.building-head-container{
+  background: #B0B0B0;
+}
+
+.building-head{
+  padding: 4rem 3rem;
+}
+
+.body-container{
+  padding: 1rem 3rem;
+  padding-bottom: 3rem;
+}
+
+.body-hero-container{
+  padding-top: 1rem;
+}
+
+.body-hero-container p{
+  line-height: 1.55rem;
+  padding: 1rem 0;
+}
+
+.body-hero-container h2{
+  margin-bottom: 0.5rem;
+}
+
+.body-main-container{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  /* align-items: center; */
+}
+
+.body-main-list{
+  padding: 0.5rem 3rem;
+}
+
+.body-main-list ul li{
+  padding-top: 0.5rem;
+}
+
+.body-main-list ul li ul li{
+  margin-left: 2rem;
+}
+
+.body-img-description p{
+  padding-top: 1rem;
+}
+
+.features-container{
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.features-container h2{
+  margin-bottom: 1rem;
+}
+
+.features-container ul{
+  padding: 0.25rem 3rem;
+}
+
+.features-container ul li{
+  line-height: 1.75rem;
+}
+
+.features-container ul li a{
+  text-decoration: none;
+  color: gray;
+  font-weight: 900;
+}
+
+.why-us-container{
+  margin-bottom: 2rem;
+}
+
+.why-us-container h1{
+  font-size: 1.75rem;
+  margin-bottom: .75rem;
+}
+
+.why-us-body{
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  gap: 2rem;
+}
+
+.why-body{
+  width: 25%;
+}
+
+.why-body h2{
+  margin-bottom: .75rem;
+}
+
+.why-body p{
+  line-height: 1.5rem;
+}
+
+.other-solutions-container h2{
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+}
+
+.other-body-container{
+  display: flex;
+  gap: 1rem;
+}
+
+.other-body p{
+  padding-bottom: 1rem;
+}
+
+.other-body p a{
+  text-decoration: none;
+  color: gray;
+  font-weight: 700;
+}
+
+.other-body img{
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ProductProcess - Deployed */
+.deployed-container{
+  margin-bottom: 2rem;
+}
+
+.deployed-body-container{
+  display: flex;
+  gap: .5rem;
+  justify-content: space-between;
+}
+
+.deployed-body p{
+  margin: 1rem 0;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.deployed-body img{
+  width: 90%;
+  object-fit: cover;
+  object-position: center;
+}

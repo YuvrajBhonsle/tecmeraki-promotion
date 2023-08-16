@@ -5,7 +5,7 @@ import clientimg from '../assets/client1.webp'
 function Client() {
   return (
     <div className='client-section'>
-    <h1>What My Clients Say</h1>
+    <h1 className='client-section-h1'>What Our Clients Say</h1>
     <div className="client-container">
         <div className='client-card'>
             <img className='client-img' src={clientimg} alt="clientimg" />

@@ -1,64 +1,100 @@
-.carousel {
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    margin: 4rem 0px;
-  }
-  .carousel>h1{
-    font-size: 2.5rem;
-    display: flex;
-    margin: 23px auto;
-    border-bottom: 2px solid black;
-  }
-  .slider {
-    width: 100%;
-    display: flex;
-  transition: transform 0.5s ;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.slide {
-    display: flex;
-    width: fit-content;
+body {
+  background-color: whitesmoke;
 }
 
-.slide img {
-    margin: 13px;
-    border: 2px solid transparent;
-    border-radius: 13px;
-    width: 33%;
+@keyframes slide {
+  from {
+    transform: translateX(0);
   }
-  
-  .arrow-button {
-    position: absolute;
-    top: 50%;
-    padding: 10px;
-    background-color: black;
-    border: none;
-    color: #fff;
-    font-size: 20px;
-    cursor: pointer;
+
+  to {
+    transform: translateX(-100%);
   }
-  
-  .arrow-button.left {
-    left: 10px;
-  }
-  
-  .arrow-button.right {
-    right: 10px;
-  }
+}
+
+.portfolio-section {
+  margin-top: 4rem;
+}
+
+.portfolio-section h1 {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.images {
+  overflow: hidden;
+  margin: 60px 0;
+  white-space: nowrap;
+  position: relative;
+
+}
+
+.images::before,
+.images::after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: " ";
+  z-index: 2;
+}
+
+.images::after {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+
+.images::before {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+
+.images:hover .image-slide {
+  animation-play-state: paused;
+}
+
+.image-slide {
+  display: inline-block;
+  animation: 10s slide infinite linear;
+}
+
+.image-slide img {
+  height: 300px;
+  width: 500px;
+  margin: 0 40px;
+  border-radius: 9px;
+}
 
 @media only screen and (max-width: 1024px) {
-    .carousel{
-      width: 160vw;
-    }
-    .slider {
-        width: 60%;
-      }
-    .slide img {
-        width: 100%;
-        height: auto;
-      }
+  .portfolio-section {
+    margin-top: 2rem;
   }
-  
-  
+
+  .image-slide img {
+    height: 180px;
+    width: 300px;
+    margin: 0 40px;
+    border-radius: 9px;
+  }
+
+  .portfolio-section h1 {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .images::after {
+    left: 0;
+    background: none;
+  }
+
+  .images::before {
+    right: 0;
+    background: none;
+  }
+}

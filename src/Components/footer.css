@@ -5,6 +5,10 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    max-width: 100vw;
+    width: 100%;
+    height: min-content;
+    margin-top: auto;
 }
 .footer-section>div{
     color: white;
@@ -13,44 +17,65 @@
     align-items: center;
     width: 30vw;
 }
-.socials>img{
-    height: 33px;
-    width: 33px;
-    filter: invert(100%);
-    margin: 0px 3px;
-    cursor: pointer;
 
+.socials{
+    /* filter: invert(100%); */
+    margin: 0px 3px;
 }
-#facebook{
-    scale: 1.4;
+
+.footer-section .socials{
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    cursor: pointer;
+    gap: 1rem;
 }
 
 .logo>img{
-    height: 3.25rem;
-	width: 6.5rem;
+    height: 15rem;
+	width: fit-content;
 }
 .contact-email{
     color: white;
     font-size: 23px;
 }
-.copyright{
+
+.copyright p{
     margin: 13px;
+    min-width: 100vw;
+    text-align: center;
+    font-size: 1.5rem;
 }
+
 @media only screen and (max-width: 1024px){
     .footer-section{
-        width: 100vw;
+        margin-top: auto;
+        max-width: 110vw;
+        width: 100%;
         flex-direction: column;
     }
     .footer-section>div{
         width: 100%;
         margin: 13px 0;
     }
-    .socials>img{
-        height: 50px;
-        width: 50px;
-        margin: 0 13px;
+   
+    .footer-section>.contact-email{
+        max-width: 80vw;
+        width: 100%;
     }
-    .contact-email{
-        font-size: 33px;
+
+    .footer-section>.contact-email>p,
+    .footer-section>.copyright>p{
+        text-align: center;
+        font-size: 1.5rem;
+        margin: 0 1rem;
+    }
+
+    .footer-section>.copyright{
+        max-width: 80vw;
+    }
+
+    .logo>img{
+        display: none;
     }
 }

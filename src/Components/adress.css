@@ -1,0 +1,88 @@
+
+.adress-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.adress-section>h1{
+    font-size: 2.5rem;
+    margin: 3rem 0px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-container>div{
+    background-color: whitesmoke;
+    padding: 33px;
+    margin: 13px;
+    border-radius: 13px;
+    font-size: 1.3rem;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 15vw;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.card:hover{
+    margin-top: 8px;
+}
+.message-container{
+    background-color:whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 0px;
+    padding: 13px;
+    border-radius: 13px;
+}
+.message-container>h1{
+    border-bottom: 1px solid;
+    margin: 13px 0px;
+}
+.message-container>input, textarea{
+    /* margin: 13px; */
+    padding: 7px;
+    /* width: 30vw; */
+}
+.message-container>button{
+    padding: 7px;
+    width: 8rem;
+    border: 2px solid transparent;
+    border-radius: 3px;
+    background-color: rgb(2, 2, 158);
+    color: white;
+    cursor: pointer;
+}
+.socials{
+    margin: 13px;
+}
+/* .socials>a>img{
+    filter: invert(100%);
+    height: 33px;
+    width: 33px;
+    transition: 0.2s;
+} */
+.socials>a>img:hover{
+    scale: 1.2;
+}
+@media  (max-width: 1024px){
+    .card-container{
+        flex-direction: column;
+    }
+    .card-container>div{
+        width: 70%;
+        font-size: 1rem;
+    }
+    .message-container>input, textarea{
+        width: 90%;
+    }
+}
