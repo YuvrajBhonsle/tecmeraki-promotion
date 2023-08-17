@@ -76,14 +76,34 @@ nav {
 	display: grid;
   grid-template-columns: repeat(2, 1fr);
   width: 100vw;
-	height: 100vh;
+	height: 80vh;
 	box-shadow: 0px 1rem 1rem rgba(0,0,0,0.25);
   padding: 1rem 2rem;
 }
 
 .industries-section,
 .solutions-section {
-  width: 50%;
+  /* width: 50%; */
+	flex-wrap: wrap;
+}
+
+.solutions-body{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1rem;
+}
+
+.solutions-section ul{
+	list-style: none;
+	background: #eee;
+	padding: 0.5rem .35rem;
+	margin-bottom: 0.5rem;
+	/* flex-wrap: wrap; */
+}
+
+.solutions-section ul li{
+	padding-bottom: 0.25rem;
+	font-size: .8rem;
 }
 
 .industries-section h1,

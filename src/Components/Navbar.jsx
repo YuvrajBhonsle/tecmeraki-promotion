@@ -37,8 +37,8 @@ function Navbar() {
         event.target.id !== "ham"
       ) {
         closeNavbar();
-      } else if(!navRef.current.contains(event.target)){
-        setDropdown(false)
+      } else if (!navRef.current.contains(event.target)) {
+        setDropdown(false);
       }
       // console.log(event.target.textContent)
     };
@@ -47,6 +47,16 @@ function Navbar() {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const handleMouseEnter = (index) => {
+    setActiveIndex(index);
+  };
+
+  const handleMouseLeave = () => {
+    setActiveIndex(null);
+  };
 
   return (
     <>
@@ -84,79 +94,32 @@ function Navbar() {
           <div className="dropdown-content">
             <section className="industries-section">
               <h1>Industries</h1>
-              <a href="/" onClick={handleDropdownLinkClick}>
-                <Link to="/buildingManagement">Building Management</Link>
-              </a>
-              <a href="/" onClick={handleDropdownLinkClick}>
-                <Link to="/productProcess">Product Process Monitoring</Link>
-              </a>
-              <a href="/" onClick={handleDropdownLinkClick}>
-                <Link to="/roPlant">RO Plant Monitoring</Link>
-              </a>
-              <a href="/" onClick={handleDropdownLinkClick}>
-                <Link to="/sewage">Sewage Treatment Plant</Link>
-              </a>
-              <a href="/" onClick={handleDropdownLinkClick}>
-                <Link to="/energyManagement">Energy Management</Link>
-              </a>
-              <a href="/" onClick={handleDropdownLinkClick}>
-                <Link to="/machineHealth">Machine Health Monitoring</Link>
-              </a>
-              <a href="/" onClick={handleDropdownLinkClick}>
-                <Link to="/logistics">Connected Logistics</Link>
-              </a>
-              <a href="/" onClick={handleDropdownLinkClick}>
-                <Link to="/assetManagement">Asset Management & Ticketing</Link>
-              </a>
+              {industriesData.map((item, index) => (
+                <a key={index} href="/" onClick={handleDropdownLinkClick}>
+                  <Link to={item.link}>{item.title}</Link>
+                </a>
+              ))}
             </section>
             <section className="solutions-section">
               <h1>Solutions</h1>
-              <a href="/" onClick={handleDropdownLinkClick}>
-                <Link to="/buildingManagement">Advanced IoT Solutions</Link>
-              </a>
-              <a href="/" onClick={handleDropdownLinkClick}>
-                <Link to="/productProcess">Networking Excellence</Link>
-              </a>
-              <a href="/" onClick={handleDropdownLinkClick}>
-                <Link to="/roPlant">Field Work Expertise</Link>
-              </a>
-              <a href="/" onClick={handleDropdownLinkClick}>
-                <Link to="/sewage">Automation Solutions</Link>
-              </a>
-              <a href="/" onClick={handleDropdownLinkClick}>
-                <Link to="/energyManagement">
-                  PLC (Programmable Logic Controller) Solutions
-                </Link>
-              </a>
-              <a href="/" onClick={handleDropdownLinkClick}>
-                <Link to="/machineHealth">
-                  HMI (Human Machine Interface) Solutions
-                </Link>
-              </a>
-              <a href="/" onClick={handleDropdownLinkClick}>
-                <Link to="/logistics">
-                  MES (Manufacturing Execution System) Solutions
-                </Link>
-              </a>
-              <a href="/" onClick={handleDropdownLinkClick}>
-                <Link to="/assetManagement">
-                  SCADA (Supervisory Control and Data Acquisition) Solutions
-                </Link>
-              </a>
-              <a href="/" onClick={handleDropdownLinkClick}>
-                <Link to="/assetManagement">
-                  Robotics and Automation Integration
-                </Link>
-              </a>
-              <a href="/" onClick={handleDropdownLinkClick}>
-                <Link to="/assetManagement">Process Optimization</Link>
-              </a>
-              <a href="/" onClick={handleDropdownLinkClick}>
-                <Link to="/assetManagement">Energy Management Solutions</Link>
-              </a>
-              <a href="/" onClick={handleDropdownLinkClick}>
-                <Link to="/assetManagement">Custom Solution Development</Link>
-              </a>
+              <main className="solutions-body">
+              {solutionsData.map((item, index) => (
+                <div
+                  key={index}
+                  onMouseEnter={() => handleMouseEnter(index)}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  <Link to={item.link}>{item.title}</Link>
+                  {activeIndex === index && (
+                    <ul>
+                      {item.content.map((contentItem, contentIndex) => (
+                        <li key={contentIndex}>{contentItem}</li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+              </main>
             </section>
           </div>
         </>
@@ -164,5 +127,174 @@ function Navbar() {
     </>
   );
 }
+
+const industriesData = [
+  {
+    title: "Building Management",
+    link: "/buildingManagement",
+  },
+  {
+    title: "Product Process Monitoring",
+    link: "/productProcess",
+  },
+  {
+    title: "RO Plant Monitoring",
+    link: "/roPlant",
+  },
+  {
+    title: "Sewage Treatment Plant",
+    link: "/sewage",
+  },
+  {
+    title: "Energy Management",
+    link: "/energyManagement",
+  },
+  {
+    title: "Machine Health Monitoring",
+    link: "/machineHealth",
+  },
+  {
+    title: "Connected Logistics",
+    link: "/logistics",
+  },
+  {
+    title: "Asset Management & Ticketing",
+    link: "/assetManagement",
+  },
+];
+
+const solutionsData = [
+  {
+    title: "Advanced IoT Solutions",
+    link: "/buildingManagement",
+    content: [
+      "Remote Monitoring and Control",
+      "Predictive Maintenance",
+      "Data Analytics and Insights",
+      "Real-time Asset Tracking",
+      "Condition Monitoring",
+    ],
+  },
+  {
+    title: "Networking Excellence",
+    link: "/networkingExcellence",
+    content: [
+      "Industrial Ethernet Networks",
+      "Wireless Connectivity Solutions",
+      "Network Security and Cybersecurity",
+      "Network Redundancy and Reliability",
+      "Network Performance Optimization",
+    ],
+  },
+  {
+    title: "Field Work Expertise",
+    link: "/fieldWorkExpertise",
+    content: [
+      "Equipment Installation and Commissioning",
+      "Maintenance and Repairs",
+      "Upgrades and Retrofits",
+      "Calibration and Testing",
+      "On-Site Troubleshooting and Support",
+    ],
+  },
+  {
+    title: "Automation Solutions",
+    link: "/automationSolutions",
+    content: [
+      "Process Automation",
+      "Robotics Integration",
+      "PLC and HMI Programming",
+      "SCADA System Implementation",
+      "MES (Manufacturing Execution System) Integration",
+    ],
+  },
+  {
+    title: "PLC (Programmable Logic Controller) Solutions",
+    link: "/plcSolutions",
+    content: [
+      "PLC Programming and Configuration",
+      "PLC System Design",
+      "PLC Troubleshooting and Debugging",
+      "PLC Networking and Communication",
+      "PLC Hardware Selection",
+    ],
+  },
+  {
+    title: "HMI (Human Machine Interface) Solutions",
+    link: "/hmiSolutions",
+    content: [
+      "HMI Design and Interface Development",
+      "Visualization and Operator Interface",
+      "Alarm Management and Reporting",
+      "Touchscreen and User Interaction",
+    ],
+  },
+  {
+    title: "MES (Manufacturing Execution System) Solutions",
+    link: "/mesSolutions",
+    content: [
+      "Production Tracking and Reporting",
+      "Work Order Management",
+      "Inventory and Material Management",
+      "Quality Control and Compliance",
+      "Performance Analysis and KPI Monitoring",
+    ],
+  },
+  {
+    title: "SCADA (Supervisory Control and Data Acquisition) Solutions",
+    link: "/scadaSolutions",
+    content: [
+      "Real-time Process Monitoring",
+      "Remote Control and Supervision",
+      "Data Acquisition and Historization",
+      "Alarm Notification and Management",
+      "SCADA System Integration",
+    ],
+  },
+  {
+    title: "Robotics and Automation Integration",
+    link: "/roboticsIntegration",
+    content: [
+      "Robotic Workcell Design and Integration",
+      "Robotic Arm Programming",
+      "Collaborative Robotics (Cobots)",
+      "Robotic Vision and Sensing",
+      "End-of-Arm Tooling Design",
+    ],
+  },
+  {
+    title: "Process Optimization",
+    link: "/processOptimization",
+    content: [
+      "Workflow Analysis and Improvement",
+      "Lean Manufacturing Implementation",
+      "Six Sigma Process Optimization",
+      "Efficiency Enhancement Strategies",
+      "Waste Reduction and Cost Savings",
+    ],
+  },
+  {
+    title: "Energy Management Solutions",
+    link: "/energyManagementSolutions",
+    content: [
+      "Energy Monitoring and Analysis",
+      "Energy Efficiency Assessment",
+      "Load Management and Demand Response",
+      "Renewable Energy Integration",
+      "Energy Consumption Optimization",
+    ],
+  },
+  {
+    title: "Custom Solution Development",
+    link: "/customSolutionDevelopment",
+    content: [
+      "Tailored Automation Solutions",
+      "Custom Equipment Design and Fabrication",
+      "Integration with Third-party Systems",
+      "Bespoke Software Development",
+      "Unique Industrial Challenges Resolution",
+    ],
+  },
+];
 
 export default Navbar;
