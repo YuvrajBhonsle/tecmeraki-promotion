@@ -25,10 +25,10 @@ function Footer() {
         <img src={logo} alt="logo" />
       </div>
       <div className="contact-email">
-        <p>automation@gmail.com</p>
+        <p>chaitanya.patel@tecmeraki.co.in</p>
       </div>
       <div className="copyright">
-        <p>All right reserved 2023 @ automation pvt. ltd.</p>
+        <p>All right reserved 2023 @ chaitanya.patel@tecmeraki.co.in</p>
       </div>
     </div>
   );
