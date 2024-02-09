@@ -61,8 +61,12 @@ function Navbar() {
   return (
     <>
       <header>
-        <div>
-          <img src={logo} alt="profile pic" />
+        <div className="logo">
+          <img
+            src={logo}
+            alt="profile pic"
+            style={{ height: "4em", width: "8em", justifySelf: "center" }}
+          />
         </div>
         <nav ref={navRef}>
           <a href="/" onClick={closeNavbar}>
@@ -74,9 +78,9 @@ function Navbar() {
           <a href="/#services" onClick={closeNavbar}>
             Services
           </a>
-          <div className="dropdown">
-            <a onClick={() => setDropdown(!dropdown)}>Industries & Solutions</a>
-          </div>
+          <a href="/" onClick={closeNavbar}>
+            <NavLink to="/industries">Industries and Solutions</NavLink>{" "}
+          </a>
           <a href="/contactpage" onClick={closeNavbar}>
             <NavLink to="/contactpage">Contact</NavLink>
           </a>
@@ -103,22 +107,22 @@ function Navbar() {
             <section className="solutions-section">
               <h1>Solutions</h1>
               <main className="solutions-body">
-              {solutionsData.map((item, index) => (
-                <div
-                  key={index}
-                  onMouseEnter={() => handleMouseEnter(index)}
-                  onMouseLeave={handleMouseLeave}
-                >
-                  <Link to={item.link}>{item.title}</Link>
-                  {activeIndex === index && (
-                    <ul>
-                      {item.content.map((contentItem, contentIndex) => (
-                        <li key={contentIndex}>{contentItem}</li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              ))}
+                {solutionsData.map((item, index) => (
+                  <div
+                    key={index}
+                    onMouseEnter={() => handleMouseEnter(index)}
+                    onMouseLeave={handleMouseLeave}
+                  >
+                    <Link to={item.link}>{item.title}</Link>
+                    {activeIndex === index && (
+                      <ul>
+                        {item.content.map((contentItem, contentIndex) => (
+                          <li key={contentIndex}>{contentItem}</li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                ))}
               </main>
             </section>
           </div>

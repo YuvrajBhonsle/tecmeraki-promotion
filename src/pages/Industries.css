@@ -1,0 +1,14 @@
+.industries-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.tree-link {
+  stroke: url(#gradient) !important;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

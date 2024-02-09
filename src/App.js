@@ -19,6 +19,7 @@ import EnergyManagement from "./pages/EnergyManagement";
 import MachineHealth from "./pages/MachineHealth";
 import ConnectedLogistics from "./pages/ConnectedLogistics";
 import AssetManagement from "./pages/AssetManagement";
+import Industries from "./pages/Industries";
 function App() {
   return (
     <BrowserRouter>
@@ -56,6 +57,7 @@ function App() {
               element={<AssetManagement />}
             ></Route>
             <Route path="/contactpage" element={<ContactPage />}></Route>
+            <Route path="/industries" element={<Industries />} />
             {/* <Route path="/contactpage" element={<AdressPage />}></Route> */}
           </Routes>
         </React.Fragment>

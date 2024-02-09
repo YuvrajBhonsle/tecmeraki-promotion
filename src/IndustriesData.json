@@ -1,0 +1,210 @@
+{
+  "name": "Industries",
+  "children": [
+    {
+      "name": "Oil and Gas Industry",
+      "children": [
+        {
+          "name": "Remote monitoring of oil and gas facilities"
+        },
+        {
+          "name": "Scada Systems for real-time Control"
+        },
+        {
+          "name": "Tank farm management using automation Automation"
+        },
+        {
+          "name": "Automation in LNG proccessing"
+        },
+        {
+          "name": "Condition based Maintenance using Sensors"
+        },
+        {
+          "name": "Real-time data analysis for decision-making"
+        },
+        {
+          "name": "SCADA Systemis for pipeline Control and monitoring"
+        }
+      ]
+    },
+    {
+      "name": "Pharmaceutical Industry",
+      "children": [
+        {
+          "name": "Pharmaceutical batch processing automation"
+        },
+        {
+          "name": "Packaging and labeling of pharmaceuticals"
+        },
+        {
+          "name": "Regulatory Compliance and validation in automation"
+        },
+        {
+          "name": "Automation in Tablet and Capsule manufacturing"
+        },
+        {
+          "name": "Cleanroom automation and Contamination Control"
+        },
+        {
+          "name": "Automation in quality assurance and documentation"
+        },
+        {
+          "name": "Monitoring and Control of environmental Condition"
+        }
+      ]
+    },
+    {
+      "name": "Chemical Industries",
+      "children": [
+        {
+          "name": "Automation in Chemical Reactor Control"
+        },
+        {
+          "name": "Continuous Flow chemistry using automation"
+        },
+        {
+          "name": "Real-time monitoring of chemical processes"
+        },
+        {
+          "name": "Automated mixing and blending operation"
+        },
+        {
+          "name": "Automation in chemical and labeling packaging"
+        },
+        {
+          "name": "Process analytics for optimal performance"
+        },
+        {
+          "name": "SCADA Systems for chemical plant Control Real-time environmental Compliance monitoring"
+        },
+        {
+          "name": "Procell optimifation using advanced algasuithers"
+        },
+        {
+          "name": "Automation in Specialty chemicals production"
+        },
+        {
+          "name": "Automation in fine chemical manufacturing "
+        },
+        {
+          "name": "Real-time monitoring of chemical reactions"
+        }
+      ]
+    },
+    {
+      "name": "Food and Beverage Industry",
+      "children": [
+        {
+          "name": "Automated food processing packaging lines"
+        },
+        {
+          "name": "Food Safety and traceability using automation"
+        },
+        {
+          "name": "Control Systems for temperature and humidity - Sensitive products"
+        },
+        {
+          "name": "Dairy product processing automation"
+        },
+        {
+          "name": "Automated labelling and Barcode system"
+        },
+        {
+          "name": "Conveyor Systems for food handeling"
+        },
+        {
+          "name": "Automation in Snack food production"
+        },
+        {
+          "name": "Clean-in-place(CIP) Systems for hygiene"
+        },
+        {
+          "name": "Automation in Confectionery and chocolate manufacturing"
+        },
+        {
+          "name": "Automation in daily product packaging"
+        },
+        {
+          "name": "Line Balancing / Integration"
+        }
+      ]
+    },
+    {
+      "name": "Energy Industry",
+      "children": [
+        {
+          "name": "Automation in power plant Control Systems"
+        },
+        {
+          "name": "Renewable energy intergration & Control"
+        },
+        {
+          "name": "Solar Panel tracking and maintenance"
+        },
+        {
+          "name": "Energy management Systems (EMS)"
+        },
+        {
+          "name": "Energy-efficient HVAC Systems"
+        },
+        {
+          "name": "Automation in Smart City Energy Management."
+        },
+        {
+          "name": "Real Time Energy Consumption Monitoring"
+        },
+        {
+          "name": "Automation in energy-efficient building Systems"
+        }
+      ]
+    },
+    {
+      "name": "Logistics and Warehousing Industry",
+      "children": [
+        {
+          "name": "Automated material handling"
+        },
+        {
+          "name": "Inventory management"
+        },
+        {
+          "name": "Order fullfilment"
+        }
+      ]
+    },
+    {
+      "name": "Automotive Industry",
+      "children": [
+        {
+          "name": "Car manufacturing"
+        },
+        {
+          "name": "Component assembly"
+        },
+        {
+          "name": "Automotive parts production"
+        }
+      ]
+    },
+    {
+      "name": "Utility",
+      "children": [
+        {
+          "name": "Water and Wastewater"
+        },
+        {
+          "name": "Water Treatment Plant"
+        },
+        {
+          "name": "Sewage Treatment Plant"
+        },
+        {
+          "name": "Effelunt Treatment Plant"
+        },
+        {
+          "name": "Building Management"
+        }
+      ]
+    }
+  ]
+}
