@@ -14,13 +14,14 @@ function Industries() {
         translate={translate}
         orientation="horizontal"
         initialDepth={1}
-        separation={{ siblings: 0.9, nonSiblings: 1 }}
+        separation={{ siblings: 1, nonSiblings: 1 }}
         zoomable={false}
-        nodeSize={{ x: 50, y: 50 }}
+        nodeSize={{ x: 40, y: 40 }}
         renderCustomNodeElement={CustomNodeElement}
         shouldCollapseNeighborNodes
         depthFactor={300}
         pathClassFunc={() => "tree-link"}
+        enableLegacyTransitions
       />
     </div>
   );

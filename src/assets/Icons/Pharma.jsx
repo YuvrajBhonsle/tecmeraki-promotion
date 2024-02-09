@@ -5,16 +5,28 @@ function Pharma() {
     <svg
       version="1.0"
       xmlns="http://www.w3.org/2000/svg"
-      width="20px"
-      height="20px"
-      x={-44}
-      y={12}
+      width="30px"
+      height="30px"
+      y={-16}
       viewBox="0 0 1080.000000 1080.000000"
       preserveAspectRatio="xMidYMid meet"
     >
+      <defs>
+        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stopColor="#d64435" />
+          <stop offset="100%" stopColor="#3f2995" />
+        </linearGradient>
+      </defs>
+      <rect
+        width="100%"
+        height="100%"
+        rx="600"
+        ry="600"
+        fill="url(#gradient)"
+      />
       <g
-        transform="translate(0.000000,1080.000000) scale(0.100000,-0.100000)"
-        fill="#000000"
+        transform="translate(100.000000,900.000000) scale(0.080000,-0.080000)"
+        fill="#ffffff"
         stroke="none"
       >
         <path
