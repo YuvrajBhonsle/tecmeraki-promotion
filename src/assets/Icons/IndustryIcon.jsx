@@ -1,14 +1,14 @@
 import React from "react";
 
-function IndustryIcon() {
+function IndustryIcon({ isDesktop }) {
   return (
     <svg
       version="1.0"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 1080.000000 1080.000000"
       preserveAspectRatio="xMidYMid meet"
-      width="30px"
-      height="30px"
+      width={isDesktop ? "30px" : "20px"}
+      height={isDesktop ? "30px" : "20px"}
       // x={-44}
       y={-16}
     >

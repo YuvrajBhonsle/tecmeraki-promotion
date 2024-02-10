@@ -9,32 +9,31 @@ import Pharma from "../assets/Icons/Pharma";
 import ServicesIcon from "../assets/Icons/ServicesIcon";
 import Utility from "../assets/Icons/Utility";
 
-const getNodeIcon = (nodeDatum) => {
+const getNodeIcon = (nodeDatum, isDesktop) => {
   //   if (nodeDatum.name === "Industries") return;
-  console.log("heres nodedatum", nodeDatum);
   if (nodeDatum.children) {
     switch (nodeDatum.name) {
       case "Oil and Gas Industry":
-        return <OilnGas />;
+        return <OilnGas isDesktop={isDesktop} />;
       case "Pharmaceutical Industry":
-        return <Pharma />;
+        return <Pharma isDesktop={isDesktop} />;
       case "Chemical Industries":
-        return <Chemical />;
+        return <Chemical isDesktop={isDesktop} />;
       case "Food and Beverage Industry":
-        return <FnB />;
+        return <FnB isDesktop={isDesktop} />;
       case "Energy Industry":
-        return <EnergyIcon />;
+        return <EnergyIcon isDesktop={isDesktop} />;
       case "Logistics and Warehousing Industry":
-        return <Logistics />;
+        return <Logistics isDesktop={isDesktop} />;
       case "Automotive Industry":
-        return <AutomotiveIcon />;
+        return <AutomotiveIcon isDesktop={isDesktop} />;
       case "Utility":
-        return <Utility />;
+        return <Utility isDesktop={isDesktop} />;
       default:
-        return <IndustryIcon />;
+        return <IndustryIcon isDesktop={isDesktop} />;
     }
   } else {
-    return <ServicesIcon />;
+    return <ServicesIcon isDesktop={isDesktop} />;
   }
 };
 
